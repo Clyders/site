@@ -1,0 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+* { font-family: "Whitney"; color: white;}
+body { background: #202225; }
+h1 { color: #fff; font-size: 40px; font-weight: black; margin: 5px;}
+h3 { color: #fff; font-size: 28px; font-weight: medium; margin: 7px; margin-top:9px}
+p { color: #72767D; font-size: 15px; margin: 5px;}
+a { text-decoration: none; color: #00AFF4}
+.bpa:hover { text-decoration: underline; }
+
+.bp { text-align: center; margin-left:30px; margin-right:30px;}
+.container { background: #2f3136; padding: 20px; padding-top: 8px; width: 55vw; margin: 20px; margin-bottom:10px; height: auto; border-radius:7px}
+.container-p { margin-left:0; }
+.container-t { margin-left:10px }
+.container-b { position: relative; display: flex; -webkit-box-pack: center; justify-content: center; align-items: center; box-sizing: border-box; background: none; border: none; border-radius: 3px; font-size: 15px; font-weight: 500; line-height: 16px; padding: 9px 20px; background: #5865f2; margin-top: 20px; transition-duration: 0.25s; transition-property: background; }
+.yt-b { background: #4F545C!important; }
+.yt-b:hover { background: #5D6269!important; }
+
+.container-b:hover { background: #4752C4; cursor: pointer }
+
+.b-disabled { opacity: 50%; pointer-events: none!important; cursor: default!important;}
+
+::-webkit-scrollbar { width: 17px;} 
+::-webkit-scrollbar-track { background: #202225; border-radius:6969px} 
+::-webkit-scrollbar-thumb { background: #2f3136; border-radius:6969px; border-color:#202225; border-width: 5px; border-style: solid;}
+::-webkit-scrollbar-thumb:hover { background: #35373D;}
