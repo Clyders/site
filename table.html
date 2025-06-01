@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="transition-colors duration-300">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mines Game Multipliers - Full Table</title>
+  <title>Mines Game Multipliers</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     th, td {
       white-space: nowrap;
     }
+    .sticky-col {
+      position: sticky;
+      left: 0;
+      background-color: inherit;
+      z-index: 20;
+    }
+    .dark .sticky-col {
+      background-color: #1f2937; /* gray-800 */
+    }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 py-6">
-    <h1 class="text-3xl font-bold text-center mb-6">Mines Game Multipliers</h1>
-    <div class="overflow-x-auto">
-      <table class="table-auto min-w-full border border-gray-300 bg-white shadow rounded-lg text-sm">
-        <thead class="bg-blue-600 text-white">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold">Mines Game Multipliers</h1>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+        Toggle Theme
+      </button>
+    </div>
+    <div class="overflow-auto border rounded-lg shadow-md bg-white dark:bg-gray-800">
+      <table class="table-auto w-full text-sm">
+        <thead class="bg-blue-600 text-white sticky top-0 z-30">
           <tr>
-            <th class="px-3 py-2 sticky left-0 bg-blue-600 z-10">Reveals ↓ / Mines →</th>
+            <th class="px-3 py-2 sticky-col">Reveals ↓ / Mines →</th>
             <th class="px-3 py-2">1</th>
             <th class="px-3 py-2">2</th>
             <th class="px-3 py-2">3</th>
@@ -36,8 +50,26 @@
             <th class="px-3 py-2">15</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="even:bg-gray-50"><td class="px-3 py-2 font-medium bg-gray-200 sticky left-0 z-0">1</td><td class="px-3 py-2 text-center">1.05x</td><td class="px-3 py-2 text-center">1.06x</td><td class="px-3 py-2 text-center">1.07x</td><td class="px-3 py-2 text-center">1.08x</td><td class="px-3 py-2 text-center">1.10x</td><td class="px-3 py-2 text-center">1.12x</td><td class="px-3 py-2 text-center">1.13x</td><td class="px-3 py-2 text-center">1.15x</td><td class="px-3 py-2 text-center">1.17x</td><td class="px-3 py-2 text-center">1.19x</td><td class="px-3 py-2 text-center">1.21x</td><td class="px-3 py-2 text-center">1.24x</td><td class="px-3 py-2 text-center">1.26x</td><td class="px-3 py-2 text-center">1.29x</td><td class="px-3 py-2 text-center">1.33x</td></tr>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          <!-- Example row (repeat for each) -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+            <td class="px-3 py-2 font-medium bg-gray-200 dark:bg-gray-700 sticky-col">1</td>
+            <td class="px-3 py-2 text-center">1.05x</td>
+            <td class="px-3 py-2 text-center">1.06x</td>
+            <td class="px-3 py-2 text-center">1.07x</td>
+            <td class="px-3 py-2 text-center">1.08x</td>
+            <td class="px-3 py-2 text-center">1.10x</td>
+            <td class="px-3 py-2 text-center">1.12x</td>
+            <td class="px-3 py-2 text-center">1.13x</td>
+            <td class="px-3 py-2 text-center">1.15x</td>
+            <td class="px-3 py-2 text-center">1.17x</td>
+            <td class="px-3 py-2 text-center">1.19x</td>
+            <td class="px-3 py-2 text-center">1.21x</td>
+            <td class="px-3 py-2 text-center">1.24x</td>
+            <td class="px-3 py-2 text-center">1.26x</td>
+            <td class="px-3 py-2 text-center">1.29x</td>
+            <td class="px-3 py-2 text-center">1.33x</td>
+          </tr>
           <tr class="even:bg-gray-50"><td class="px-3 py-2 font-medium bg-gray-200 sticky left-0 z-0">2</td><td class="px-3 py-2 text-center">1.08x</td><td class="px-3 py-2 text-center">1.11x</td><td class="px-3 py-2 text-center">1.13x</td><td class="px-3 py-2 text-center">1.16x</td><td class="px-3 py-2 text-center">1.20x</td><td class="px-3 py-2 text-center">1.24x</td><td class="px-3 py-2 text-center">1.29x</td><td class="px-3 py-2 text-center">1.33x</td><td class="px-3 py-2 text-center">1.39x</td><td class="px-3 py-2 text-center">1.45x</td><td class="px-3 py-2 text-center">1.52x</td><td class="px-3 py-2 text-center">1.60x</td><td class="px-3 py-2 text-center">1.69x</td><td class="px-3 py-2 text-center">1.79x</td><td class="px-3 py-2 text-center">1.91x</td></tr>
           <tr class="even:bg-gray-50"><td class="px-3 py-2 font-medium bg-gray-200 sticky left-0 z-0">3</td><td class="px-3 py-2 text-center">1.11x</td><td class="px-3 py-2 text-center">1.15x</td><td class="px-3 py-2 text-center">1.19x</td><td class="px-3 py-2 text-center">1.23x</td><td class="px-3 py-2 text-center">1.28x</td><td class="px-3 py-2 text-center">1.33x</td><td class="px-3 py-2 text-center">1.39x</td><td class="px-3 py-2 text-center">1.45x</td><td class="px-3 py-2 text-center">1.52x</td><td class="px-3 py-2 text-center">1.60x</td><td class="px-3 py-2 text-center">1.69x</td><td class="px-3 py-2 text-center">1.79x</td><td class="px-3 py-2 text-center">1.90x</td><td class="px-3 py-2 text-center">2.02x</td><td class="px-3 py-2 text-center">2.15x</td></tr>
           <tr class="even:bg-gray-50"><td class="px-3 py-2 font-medium bg-gray-200 sticky left-0 z-0">4</td><td class="px-3 py-2 text-center">1.14x</td><td class="px-3 py-2 text-center">1.19x</td><td class="px-3 py-2 text-center">1.24x</td><td class="px-3 py-2 text-center">1.30x</td><td class="px-3 py-2 text-center">1.36x</td><td class="px-3 py-2 text-center">1.42x</td><td class="px-3 py-2 text-center">1.49x</td><td class="px-3 py-2 text-center">1.56x</td><td class="px-3 py-2 text-center">1.64x</td><td class="px-3 py-2 text-center">1.73x</td><td class="px-3 py-2 text-center">1.83x</td><td class="px-3 py-2 text-center">1.93x</td><td class="px-3 py-2 text-center">2.04x</td><td class="px-3 py-2 text-center">2.16x</td><td class="px-3 py-2 text-center">2.29x</td></tr>
